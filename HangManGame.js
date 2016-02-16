@@ -1,34 +1,3 @@
-//Hangman is a paper and pencil guessing game for two or more players.
-//One player thinks of a word, phrase or sentence and the other tries to guess it 
-//by suggesting letters, within a certain number of guesses.
-//Everytime the player misses a word, a part of the sketch is drawn: 
-//Which represents each part of the mans body
-
-//You have to implement a class Hangman that receives a word in it's constructor and 
-//has the method guess, that will be used by the player to try to guess the word.
-
-//Your method guess will receive a letter as parameter and has this return behaviour:
-
-//if the player found the word: You found the word! ({word})
-//if the player got hung: You got hung! The word was {word}.
-//if the game still on: {game state}
-//if the game has ended already: The game has ended.
-//important: if the player guesses a letter that was already guessed, you should ignore
-//it and return the {game state}
-
-//{game state}
-//The {game state} is the word to be found with all letters separated by white space.
-// The letters that weren't found yet will be replaced with _ and, if the player had 
-//missed one or more letters, we will keep this record adding # to the output followed
-//by a string with all missed letters in order of occurence.
-//Ex. If the player is trying to guess the word codewars and attempts with the letters
-//d,w,u,a,c,g,s, respectively, he would guess the letters d,w,a,c,s right and miss 
-//the letters u,g. The game state at this point should look like:
-//c _ d _ w a _ s # ug
-
-
-//-----------------------------
-
 var Hangman = function (word) {
 	this.word = word;
 
@@ -60,7 +29,7 @@ var Hangman = function (word) {
 
 			if (gameOver === this.word.length) {
 
-				console.log("The game has ended.");
+				return "The game has ended.";
 
 				} else {
 
@@ -80,8 +49,6 @@ var Hangman = function (word) {
 
 							//adds to the +1 to the counter
 							gameTries += 1;
-
-							console.log("Awwwww shucks try again you guess wrong try again. It' ok you got " + (6 - gameTries) + " left");
 						};
 
 						var wrongLetterUsedArrayToString = wrongLetterUsedArray.toString();
@@ -96,7 +63,7 @@ var Hangman = function (word) {
 
 						var outputGameState = rightLetterUsedFinished + " " + wrongLetterUsedFinished;
 
-						console.log(outputGameState);
+						return outputGameState;
 
 				
 
@@ -110,8 +77,38 @@ var Hangman = function (word) {
 
 						if (indexOfLetterOfRightLetterUsedArray === -1) {
 
+//__________________________________________testing purposes
+							var catchRepeatedLetters = function (letterYouWantToInsert, arrYouWantToReplace, origanlWord) {
+
+								var repeatedLetter = [];
+
+								for (var a = 0; a < origanlWord.length; a++) {
+
+									var searchForLetter = origanlWord.slice(a,(a + 1));
+
+									if (searchForLetter === letterYouWantToInsert) {
+
+										repeatedLetter.push(a);
+									};
+								};
+
+								for (var a = 0; a < repeatedLetter.length; a++) {
+
+									var index = repeatedLetter[a];
+
+									arrYouWantToReplace[index] = letterYouWantToInsert;
+								};
+
+								//
+								arrYouWantToReplace = arrYouWantToReplace;
+
+							};
+
 							//makes sure it ignores if user uses the same letter 
-							rightLetterUsedArray[indexOfLetter] = letter;
+							//rightLetterUsedArray[indexOfLetter] = letter;
+
+							catchRepeatedLetters(letter, rightLetterUsedArray, this.word);
+
 
 							gameOver += 1;
 
@@ -128,17 +125,13 @@ var Hangman = function (word) {
 
 						var outputGameState = rightLetterUsedFinished + " " + wrongLetterUsedFinished;
 
-						if (gameOver === this.word.length) {
+						if (gameOver === this.word.length) { return "You found the word! " + "(" + this.word + ")"; } else if (wrongLetterUsedArray.length === 1) {
 
-							console.log("you found the word! " + this.word);
+							return rightLetterUsedFinished;
 
-							} else if (wrongLetterUsedArray.length === 1) {
+							} else {
 
-								console.log(rightLetterUsedFinished);
-
-								} else {
-
-									console.log(outputGameState);
+								return outputGameState;
 						};
 					};
 
@@ -153,38 +146,21 @@ var Hangman = function (word) {
 	};
 };
 
+var king = new Hangman("ababab");
 
-
-//test works 
-var king = new Hangman("wars");
-console.log(king.word);
-king.guess("w");
-king.guess("u");
-king.guess("s");
 king.guess("a");
-king.guess("r");
-king.guess("g");
+king.guess("c");
+king.guess("b");
+
+var david = new Hangman("warsasaasasas");
+david.guess("w");
+david.guess("u");
+david.guess("s");
+david.guess("a");
+david.guess("r");
+david.guess("g");
 //king.guess("v");
 //king.guess("e");
 //king.guess("w");
 //king.guess("z");
 //king.guess("k");
-
-
-
-//Example:
-
-//let hangman = new Hangman('wars');
-
-//hangman.guess('w')
-//w _ _ _
-//hangman.guess('u')
-//w _ _ _ # u
-//hangman.guess('s')
-//w _ _ s # u
-//hangman.guess('a')
-//w a _ s # a
-//hangman.guess('r')
-//# You found the word! (wars)
-//hangman.guess('g')
-//# The game has ended.
