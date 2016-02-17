@@ -1,3 +1,36 @@
+//Hangman is a paper and pencil guessing game for two or more players.
+//One player thinks of a word, phrase or sentence and the other tries to guess
+//it by suggesting letters, within a certain number of guesses.
+//If the player finds the word before being hung he wins. He has 6 chances to miss before being hung.
+
+//Your task
+
+//You have to implement a class Hangman that receives a word in it's constructor
+//and has the method guess, that will be used by the player to try to guess the word.
+
+//Your method guess will receive a letter as parameter and has this return behaviour:
+
+//if the player found the word: You found the word! ({word})
+//if the player got hung: You got hung! The word was {word}.
+//if the game still on: {game state}
+//if the game has ended already: The game has ended.
+//important: if the player guesses a letter that was already guessed, you should ignore it and return the {game state}
+
+//{game state}
+
+//The {game state} is the word to be found with all letters separated by white space.
+//The letters that weren't found yet will be replaced with _ and,
+//if the player had missed one or more letters, we will keep this record adding
+//# to the output followed by a string with all missed letters in order of occurence.
+//Ex. If the player is trying to guess the word codewars and attempts with
+//the letters d,w,u,a,c,g,s, respectively, he would guess the letters d,w,a,c,s
+//right and miss the letters u,g. The game state at this point should look like:
+//c _ d _ w a _ s # ug
+
+
+
+
+
 var Hangman = function (word) {
 	this.word = word;
 
@@ -12,9 +45,9 @@ var Hangman = function (word) {
 		//is wrong letters that were used
 		var wrongLetterUsedArray = ["# "];
 
-		//puts _ for every letter of word 
+		//puts _ for every letter of word
 		for (var a = 0; a < this.word.length; a++) {
-				
+
 			rightLetterUsedArray.push("_");
 
 		};
@@ -24,7 +57,7 @@ var Hangman = function (word) {
 
 
 		//this if statement limits the time of times you can run the game
-		//after 6 times it returns you lose and the word 
+		//after 6 times it returns you lose and the word
 		if (gameTries < 6) {
 
 			if (gameOver === this.word.length) {
@@ -33,10 +66,10 @@ var Hangman = function (word) {
 
 				} else {
 
-					//gets index of letter 
+					//gets index of letter
 					var indexOfLetter = this.word.indexOf(letter);
 
-			
+
 					if (indexOfLetter === -1) {
 
 						var indexOfLetterOfWrongLetterUsedArray = wrongLetterUsedArray.indexOf(letter);
@@ -65,7 +98,7 @@ var Hangman = function (word) {
 
 						return outputGameState;
 
-				
+
 
 					};
 
@@ -103,9 +136,6 @@ var Hangman = function (word) {
 								arrYouWantToReplace = arrYouWantToReplace;
 
 							};
-
-							//makes sure it ignores if user uses the same letter 
-							//rightLetterUsedArray[indexOfLetter] = letter;
 
 							catchRepeatedLetters(letter, rightLetterUsedArray, this.word);
 
@@ -146,11 +176,6 @@ var Hangman = function (word) {
 	};
 };
 
-var king = new Hangman("ababab");
-
-king.guess("a");
-king.guess("c");
-king.guess("b");
 
 var david = new Hangman("warsasaasasas");
 david.guess("w");
@@ -164,3 +189,20 @@ david.guess("g");
 //king.guess("w");
 //king.guess("z");
 //king.guess("k");
+
+
+//Example
+//let hangman = new Hangman('wars');
+
+//hangman.guess('w')
+//w _ _ _
+//hangman.guess('u')
+//w _ _ _ # u
+//hangman.guess('s')
+//w _ _ s # u
+//hangman.guess('a')
+//w a _ s # a
+//hangman.guess('r')
+//# You found the word! (wars)
+//hangman.guess('g')
+//# The game has ended.
