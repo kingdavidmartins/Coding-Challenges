@@ -3,7 +3,7 @@ Coding Challenges & Exercises
 
 ###### Every file starts out with a commented section explaining/describing the problem and the expected result/solution.
 
-* **Solving, Refactoring, & Implementing ES6**
+**Solving, Refactoring, & Implementing ES6**
   1. Solve all problems with basic vanilla javascript
   2. Refactor & Rewrite all code. Incorporating all what I have been learning.
      Also going to try and solve all problems dynamically and with as little code
@@ -16,7 +16,7 @@ Coding Challenges & Exercises
   + As you can see I am also an __New Born Coder__ & would also love some pointers as to what I should learn/work on next.
 
 
-
+<!-- Awesome. =) -->
 
 ##### **HEY AWESOME PERSON! YES YOU! WHAT ARE YOU WAITING FOR? I'M AWESOME. YOUR  AWESOME.**
 #### :octocat: :metal: WE DEFINITELY NEED TO CONNECT :metal: :octocat:
@@ -28,4 +28,4 @@ Coding Challenges & Exercises
 [KingDavid Martins: FB] (https://www.facebook.com/kingdavid.martins.9)
 
 ###### CHECK OUT MY WEBSITE @
-~~[King David Martins: Website] (https://www.kingdavidmartins.com)~~ <-- COMING SOON
+~~[KingDavid Martins: Website] (https://www.kingdavidmartins.com)~~ <-- COMING SOON
