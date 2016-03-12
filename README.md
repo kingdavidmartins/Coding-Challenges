@@ -16,13 +16,15 @@ I am Teachable, Determined, & Joyful
   + As you can see I am also an __New Born Coder__ & would also love some pointers as to what I should learn/work on next.
 
 
-#### **_HEY AWESOME PERSON! YES YOU!! What are you waiting for? I'm Awesome. Your Awesome. We definitely need to CONNECT_**
+### **_HEY AWESOME PERSON! YES YOU! What are you waiting for? I'm Awesome. YourAwesome.
+_**
+###       :octocat: :metal: WE DEFINITELY NEED TO CONNECT :metal: :octocat:
 
-![Alt Text](http://i.imgur.com/M1nEp7h.gif)
+                    ![Alt Text](http://i.imgur.com/M1nEp7h.gif)
 
 
-## ADD Me on FB :metal: :octocat:
+# ADD Me on FB
 [KingDavid Martins: FB] (https://www.facebook.com/kingdavid.martins.9)
 
-## Check out
-~~ [King David Martins: Website] ~~ (https://www.kingdavidmartins.com) <-- COMING SOON
+# Check out
+~~[King David Martins: Website] (https://www.kingdavidmartins.com)~~ <-- COMING SOON
