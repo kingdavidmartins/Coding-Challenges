@@ -1,5 +1,28 @@
-Coding Challenges & Exercises that I have completed 
+Coding Challenges & Exercises
+=============================
 
-Every file starts out with explaining the coding problem, or 
-what problem I am trying to solve or accomplish.
+Every file starts out with a commented section explaining/describing the problem and the expected result/solution.
 
+* **Solving, Refactoring, & Implementing ES6**
+  1. Solve all problems with basic vanilla javascript
+  2. Refactor & Rewrite all code. Incorporating all what I have been learning.
+     Also going to try and solve all problems dynamically and with as little code
+     as possible.
+  3. Convert final code to ES6
+
+
+I am Teachable, Determined, & Joyful
+  + I am also open to ideas & would love feed back on my code.
+  + As you can see I am also an __New Born Coder__ & would also love some pointers as to what I should learn/work on next.
+
+
+#### **_HEY AWESOME PERSON! YES YOU!! What are you waiting for? I'm Awesome. Your Awesome. We definitely need to CONNECT_**
+
+![Alt Text](http://i.imgur.com/M1nEp7h.gif)
+
+
+## ADD Me on FB :metal: :octocat:
+[KingDavid Martins: FB] (https://www.facebook.com/kingdavid.martins.9)
+
+## Check out
+~~ [King David Martins: Website] ~~ (https://www.kingdavidmartins.com) <-- COMING SOON
