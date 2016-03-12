@@ -1,7 +1,7 @@
 Coding Challenges & Exercises
 =============================
 
-Every file starts out with a commented section explaining/describing the problem and the expected result/solution.
+###### Every file starts out with a commented section explaining/describing the problem and the expected result/solution.
 
 * **Solving, Refactoring, & Implementing ES6**
   1. Solve all problems with basic vanilla javascript
@@ -11,13 +11,15 @@ Every file starts out with a commented section explaining/describing the problem
   3. Convert final code to ES6
 
 
-I am Teachable, Determined, & Joyful
+**I am Teachable, Determined, & Joyful**
   + I am also open to ideas & would love feed back on my code.
   + As you can see I am also an __New Born Coder__ & would also love some pointers as to what I should learn/work on next.
 
 
-### **HEY AWESOME PERSON! YES YOU! What are you waiting for? I'm Awesome. YourAwesome.**
-### :octocat: :metal: WE DEFINITELY NEED TO CONNECT :metal: :octocat:
+
+
+##### **HEY AWESOME PERSON! YES YOU! WHAT ARE YOU WAITING FOR? I'M AWESOME. YOUR  AWESOME.**
+#### :octocat: :metal: WE DEFINITELY NEED TO CONNECT :metal: :octocat:
 
 ![Alt Text](http://i.imgur.com/M1nEp7h.gif)
 
