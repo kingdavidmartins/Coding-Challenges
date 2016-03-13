@@ -9,6 +9,7 @@ Coding Challenges & Exercises
      Also going to try and solve all problems dynamically and with as little code
      as possible.
   3. Convert final code to ES6
+  4. Comment code.
 
 
 **I am Teachable, Determined, & Joyful**
