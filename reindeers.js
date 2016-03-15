@@ -16,17 +16,17 @@ var reindeers = function (presents) {
     if (180 < presents) {
       throw "Expected error for " + presents + " presents";
       break;
-      } else {
-        if (presents < 1) {
-          console.log(2);
-          break;
-        } else if (maxPresentPerReindeerArray[value] - 29 <= presents && presents <= maxPresentPerReindeerArray[value]) {
-              console.log(parseFloat(value) + 3);
-              break;
-        };
+    } else {
+      if (presents < 1) {
+        console.log(2);
+        break;
+      } else if (maxPresentPerReindeerArray[value] - 29 <= presents && presents <= maxPresentPerReindeerArray[value]) {
+        console.log(parseFloat(value) + 3);
+        break;
+      };
     };
   };
 };
 
-reindeers(55); // must return 2
+reindeers(55); // must return 4
 reindeers(200); // must throw an error

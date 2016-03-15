@@ -30,3 +30,6 @@ Coding Challenges & Exercises
 
 ###### CHECK OUT MY WEBSITE @
 ~~[KingDavid Martins: Website] (https://www.kingdavidmartins.com)~~ <-- COMING SOON
+
+######  GET TO KNOW ME @
+[KingDavid Martins: About Me] (https://github.com/kingdavidmartins/About-Me)
