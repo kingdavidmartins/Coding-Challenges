@@ -4,10 +4,8 @@ function longestWord(str) {
   var wordArray = str.split(" ");
   var wordLengthArray = wordArray.map(function(word) { return word.length;
   });
-  var longestWordLength = Math.max.apply(null, wordLengthArray);
-  var theLongestWordPosition = wordLengthArray.indexOf(longestWordLength);
-  var theLongestWordFinished = wordArray[theLongestWordPosition];
-  return theLongestWordFinished;
+  var theLongestWord = wordArray[wordLengthArray.indexOf(Math.max.apply(null, wordLengthArray))];
+  return theLongestWord;
 };
 
 longestWord("hi my name is king david martins and the longest word in this string is this random word asdasipohfoinalndl21n2l312412w123");
