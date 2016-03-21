@@ -2,22 +2,12 @@
 //then return all factors of integer
 
 var getAllFactors = function (integer) {
-
-  //bin to store all factors
-  var factors = []
-
-  //for loop that divides integer by it 1 all the way through
-  //till it reaches itself
+  var factors = [];
   for(var a = 1; a <= integer; a++){
-
-    var quotient = integer/a;
-
-    //check to see if quotient is whole num. As it rounds it's
-    //if equal true then push a to factors
-    if(quotient === Math.floor(quotient)){
+    if (integer/a === Math.floor(integer/a)) {
       factors.push(a);
-    }
-  }
+    };
+  };
   return factors;
 }
 
