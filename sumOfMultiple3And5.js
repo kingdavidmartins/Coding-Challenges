@@ -9,12 +9,9 @@ var sumOfMultiple3And5 = function (number) {
     if ((a % 3 === 0) || (a % 5 === 0)) { multiplesOfArray.push(a);
     };
   };
-  console.log(multiplesOfArray);
-  var sumOfMultiples = multiplesOfArray.reduce(
-    function (a,b) {  return a + b;
-    }
+  var sumOfMultiples = multiplesOfArray.reduce( function (a,b) {  return a + b; }
   );
-  console.log(sumOfMultiples);
+  return sumOfMultiples;
 };
 
 sumOfMultiple3And5(89);
