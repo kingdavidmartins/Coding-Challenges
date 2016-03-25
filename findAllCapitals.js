@@ -2,7 +2,7 @@
 //The function must return an ordered list containing the letters
 //of all capital letters in the string.
 
-var findAllCapitals = function (word) {
+var findAllCapitals = function (str) {
   var uppercaseAlphabetArray = "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("");
   function returnUpperCase(value) {
     for (var letters in uppercaseAlphabetArray) {
@@ -10,7 +10,7 @@ var findAllCapitals = function (word) {
       };
     };
   };
-  var capitalsLetters = word.split("").filter(returnUpperCase);
+  var capitalsLetters = str.split("").filter(returnUpperCase);
 	console.log(capitalsLetters);
 };
 
