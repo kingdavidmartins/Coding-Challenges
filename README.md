@@ -4,10 +4,10 @@ Coding Challenges & Exercises
 ###### Every file starts out with a commented section explaining/describing the problem and the expected result/solution.
 
 **Solving, Refactoring, & Implementing ES6**
-  1. Solve all problems with basic vanilla javascript :heavy_check_mark: :100: :heavy_exclamation_mark: :bowtie: :eyeglasses:
+  1. Solve all problems with basic vanilla javascript           :heavy_check_mark::100::heavy_exclamation_mark::bowtie::eyeglasses:
   2. Refactor & Rewrite all code. Incorporating all what I have been learning.
      Also going to try and solve all problems dynamically and with as little code
-     as possible. Functional Programming
+     as possible. Functional Programming :heavy_check_mark::100::heavy_exclamation_mark::bowtie::eyeglasses:
   3. Convert final code to ES6
   4. Create New Folders & use Lodash.js instead of Native methods to solve the  Challenges
   5. Comment code.  
