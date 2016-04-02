@@ -2,13 +2,7 @@
 // characters that occur more than once in the given string. The given string can be
 // assumed to contain only uppercase and lowercase alphabets.
 
-function duplicateCount(text){
-  function findDuplicate(value) {
-    return (text.split(value).length - 1) > 1;
-  };
-  var finishedDuplicate = "# " + "abcdefghijklmnopqrstuvwxyz".split("").filter(findDuplicate).join(" , ");
-  return (text === "") ? "# no characters repeats more than once" : finishedDuplicate + ": " + "abcdefghijklmnopqrstuvwxyz".split("").filter(findDuplicate).length + " duplicates were found";
-};
+let duplicateCount = (text) => (text === "") ? "# no characters repeats more than once" : "# " + "abcdefghijklmnopqrstuvwxyz".split("").filter((value) => (text.split(value).length - 1) > 1).join(" , ") + " : " + "abcdefghijklmnopqrstuvwxyz".split("").filter((value) => (text.split(value).length - 1) > 1).length + " duplicates were found";
 
 duplicateCount("Indivisibilities");
 
