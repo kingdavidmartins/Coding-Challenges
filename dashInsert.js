@@ -1,22 +1,7 @@
-//Write a function insertDash(num) that will insert dashes ('-')
-//between each two odd numbers in num. For example: if num is 454793
-//the output should be 4547-9-3. Don't count zero as an odd number.
-//Code challenge from code wars
+//Write a function insertDash(num) that will insert dashes ('-') between each two odd
+//numbers in num. For example: if num is 454793 the output should be 4547-9-3. Don't
+//count zero as an odd number. Code challenge from code wars
 
-var insertDash = function (number) {
-	var numberToString = number.toString();
-  var numberDashArray = [];
-  for (var chr in numberToString) {
-    if ((string[chr] % 2) !== 0 && (string[parseFloat(chr) + 1] % 2) !== 0) {
-      numberDashArray.push(string[chr]);
-      numberDashArray.push("-");
-    } else {
-      numberDashArray.push(string[chr]);
-    };
-  };
-    var removeLastElement = numberDashArray.pop();
-  	var numberDashFinished = numberDashArray.toString().replace(/,/g, "");
-    console.log(numberDashFinished);
-};
+let insertDash =  (number) => number.toString().split("").map((value, index, array) => (parseFloat(value) % 2 !== 0 && array[index + 1] % 2 !== 0 && array[array.length - 1] !== array[index]) ? value + "-" : value).join("");
 
 insertDash(454793);
