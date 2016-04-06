@@ -8,7 +8,7 @@ Coding Challenges & Exercises
   2. Refactor & Rewrite all code. Incorporating all what I have been learning.
      Also going to try and solve all problems dynamically and with as little code
      as possible. Functional Programming :heavy_check_mark::100::heavy_exclamation_mark::bowtie::eyeglasses:
-  3. Convert final code to ES6
+  3. Convert final code to ES6 :heavy_check_mark::100::heavy_exclamation_mark::bowtie::eyeglasses:
   4. Create New Folders & use Lodash.js instead of Native methods to solve the  Challenges
   5. Comment code.  
 
