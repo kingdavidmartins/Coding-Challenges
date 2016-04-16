@@ -1,6 +1,6 @@
 var _ = require('lodash');
+var findAllCapitals = str => _.chain(str).split("").filter((value, index, array) => value === value.toUpperCase() && value !== " ").value();
 
 console.log(
-  _.chain("King DaViD MarTINs").split("").filter((value, index, array) => value === value.toUpperCase() && value !== " ")
-  .value()
+  findAllCapitals("King DaViD MarTINs")
 );
