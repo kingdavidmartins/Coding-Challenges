@@ -1,5 +1,5 @@
 var _ = require('lodash');
-var moveZeros = (str) => _.concat(_.chain(str).reject((value) => value === 0).value(), _.chain(str).filter((value) => value === 0).value());
+var moveZeros = (arr) => _.concat(_.reject(arr, (value) => value === 0), _.filter(arr, (value) => value === 0));
 
 console.log(
   moveZeros([false,1,0,1,2,0,1,3,"a"])
