@@ -2,6 +2,15 @@
 // is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
 // Your task is to write a function which changes all but the last four characters into '#'.
 
-let creditCardMask = (num) => num.toString().split("").map((value, index, array) => array.length - 4 <= index ? value : "#").join("");
+var creditCardMask = (num) =>
+  num.toString()
+    .split("")
+      .map((value, index, array) =>
+        (array.length - 4 <= index) // statement
+          ? value // run if true
+          : "#")  //run if false
+      .join("");
 
-creditCardMask(64364634634745);
+console.log(
+  creditCardMask(64364634634745)
+);

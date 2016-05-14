@@ -10,7 +10,7 @@ Coding Challenges & Exercises
      as possible. Functional Programming :heavy_check_mark::100::heavy_exclamation_mark::bowtie::eyeglasses:
   3. Convert final code to ES6 :heavy_check_mark::100::heavy_exclamation_mark::bowtie::eyeglasses:
   4. Create New Folders & use Lodash.js instead of Native methods to solve the  Challenges
-  5. Comment code.  
+  5. Use Airbnb Javascript Style Guide
 
 
 **I am Teachable, Determined, & Joyful**
