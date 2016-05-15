@@ -5,11 +5,11 @@
 var creditCardMask = (num) =>
   num.toString()
     .split("")
-      .map((value, index, array) =>
-        (array.length - 4 <= index) // statement
-          ? value // run if true
-          : "#")  //run if false
-      .join("");
+    .map((value, index, array) =>
+      (array.length - 4 <= index) // statement
+        ? value // run if true
+        : "#")  // run if false
+    .join("");
 
 console.log(
   creditCardMask(64364634634745)
