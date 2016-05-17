@@ -8,20 +8,20 @@
 //Complete the function reindeers(), which takes a number of presents and returns
 //the minimum numbers of required reindeers. If the number of presents is too high, throw an error.
 
-let reindeers = (presents) => {
-  let maxPresentPerRein = (value, index, array) => {
-    if (180 < presents) {
-      throw "Expected error for " + presents + " presents";
-    } else {
-      if (presents < 1) {
-        return 2;
-      } else if (parseFloat(value) - 29 <= presents && presents <= parseFloat(value)) {
-        return index + 3;
-      };
-    };
-  };
-  console.log("30 60 90 120 150 180".split(" ").map(maxPresentPerRein).filter((value) => value !== undefined).pop());
-};
+var reindeers = (presents) =>
+  console.log(
+    "30 60 90 120 150 180".split(" ")
+      .map((value, index) =>
+        (180 < presents)
+          ? `Err: Expected error for ${presents} presents`
+          : (presents < 1)
+            ? 2
+            : (parseFloat(value) - 29 <= presents && presents <= parseFloat(value))
+              ? index + 3
+              : undefined)
+      .filter((value) => value !== undefined)
+      .pop());
+
 
 reindeers(0); // must return 2
 reindeers(1); // must return 3

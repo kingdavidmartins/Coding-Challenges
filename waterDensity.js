@@ -17,7 +17,27 @@ Example
 
 */
 
-let waterDensity = (glass) => [glass.toString().replace(/,/g, "").match(/O/g), glass.toString().replace(/,/g, "").match(/A/g), glass.toString().replace(/,/g, "").match(/W/g), glass.toString().replace(/,/g, "").match(/H/g)].filter((value) => value !== null);
+var waterDensity = (glass) =>
+  [
+    glass.toString()
+      .replace(/,/g, "")
+      .match(/O/g)
+    ,
+    glass.toString()
+      .replace(/,/g, "")
+      .match(/A/g)
+    ,
+    glass.toString()
+      .replace(/,/g, "")
+      .match(/W/g)
+    ,
+    glass.toString()
+      .replace(/,/g, "")
+      .match(/H/g)
+  ]
+  .filter((value) => value !== null);
 
 
-waterDensity([['A','A','O','H'],['A', 'H', 'W', 'O'],['W','W','A','W'],['H','H','O','O']]) //[['O','O','O','O'],['A', 'A', 'A', 'A'],['W','W','W','W'],['H','H','H','H']]
+console.log(
+  waterDensity([['A','A','O','H'],['A', 'H', 'W', 'O'],['W','W','A','W'],['H','H','O','O']]) //[['O','O','O','O'],['A', 'A', 'A', 'A'],['W','W','W','W'],['H','H','H','H']]
+);

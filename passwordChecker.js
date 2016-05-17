@@ -2,21 +2,33 @@
 // process. It was then I realzed that I could recreate the same application.
 // the user has to create a  password that has atleast one of [upperscase, lowercase, number, special symbol]
 // 	alert("Hey!....Sorry there's seems to be a problem with the network. It seems the network has been compromised. We have to do a system reset to ensure all of our users data aren't vulnerable");
-	//alert("Don't forget to ensure your safty you'll have to diversify your passowrd by incorporating everything you can from uppercase & lowercase letters, numbers, and special symbols");
-//	let userPassword = prompt("Please input your New Password.");
+	//alert("Don't forget to ensure your safty you'll have to diversify your passowrd by incorporating everything you can from uppercase & lowercase varters, numbers, and special symbols");
+//	var userPassword = prompt("Please input your New Password.");
 
-let passwordStrengthChecker = (userPassword) => {
-	let chrUsed = (value) => {
-		for (var chr of userPassword) {
-			if (value === chr) { return value;
-			};
-		};
-	};
-	let lowercaseUsed = "abcdefghijklmnopqrstuvwxyz".split("").filter(chrUsed).length;
-	let uppercaseUsed = "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("").filter(chrUsed).length;
-	let numbersUsed = "0123456789".split("").filter(chrUsed).map((value) => parseFloat(value)).length;
-	let specialCharacterUsed = "!@€£#$%^&*()_-+=}{[]|':;?/>.<,~".split("").filter(chrUsed).length;
-	console.log([lowercaseUsed, uppercaseUsed, numbersUsed, specialCharacterUsed].indexOf(0) === -1 ? "Thank you. Your new password has been set up. Sorry for the inconvenience" : "Sorry. Please try again.");
+var passwordStrengthChecker = (userPassword) => {
+	console.log(
+		[
+			"abcdefghijklmnopqrstuvwxyz".split("")
+				.filter((value) => userPassword.indexOf(value) !== -1)
+				.length
+			,
+			"abcdefghijklmnopqrstuvwxyz".toUpperCase()
+				.split("")
+				.filter((value) => userPassword.indexOf(value) !== -1)
+				.length
+			,
+			"0123456789".split("")
+				.filter((value) => userPassword.indexOf(value) !== -1)
+				.map((value) => parseFloat(value))
+				.length
+			,
+			"!@€£#$%^&*()_-+=}{[]|':;?/>.<,~".split("")
+				.filter((value) => userPassword.indexOf(value) !== -1)
+				.length
+		]
+		.indexOf(0) === -1 // statement
+			? "Thank you. Your new password has been set up. Sorry for the inconvenience" // run if true
+			: "Sorry. Please try again."); // run if false
 };
 
 passwordStrengthChecker("P@ssword123!@#"); // "Thank you. Your new password has been set up. Sorry for the inconvenience"
