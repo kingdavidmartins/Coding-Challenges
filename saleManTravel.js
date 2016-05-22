@@ -10,11 +10,11 @@
 // The street numbers must be in the same order as the streets where they belong.
 // If a given zipcode doesn't exist in the list of clients' addresses return "zipcode:/"
 
-var saleManTravel = (r, zipcode) => {
+var saleManTravel = (r, zipcode) =>
   console.log(
     (r.toString().indexOf(zipcode) === -1 || zipcode.length < 8) // statement
       ? zipcode + ":/" // run if true
-      : zipcode + ": " // run if false 
+      : zipcode + ": " // run if false
         + r.split(",") // streetAndCity
             .filter((value) => value.toString().indexOf(zipcode) !== -1)
             .map((value) =>
@@ -24,9 +24,7 @@ var saleManTravel = (r, zipcode) => {
         + r.split(",") //addressNumber
             .filter((value) => value.toString().indexOf(zipcode) !== -1)
             .map((value) => value.split(" ").splice(0, 1).join(" "))
-            .join()
-  );
-};
+            .join());
 
 var r = "123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432";
 saleManTravel(r, "OH 43071"); // "OH 43071:Main Street St. Louisville,Main Long Road St. Louisville/123,432"

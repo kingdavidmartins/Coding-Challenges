@@ -2,19 +2,28 @@
 //If the coupon is good, console.log(true). Otherwise, console.log(false). A coupon expires
 //at the END of the expiration date. All dates will be passed in as strings in this format: "June 15, 2014"
 
-let checkCoupon = (enteredCode, correctCode, currentDate, expirationDate) => {
+var checkCoupon = (enteredCode, correctCode, currentDate, expirationDate) => {
   if (enteredCode !== correctCode) {
 		console.log(false);
 	} else {
-		let currentDateArray = currentDate.split(" ").map((value, index) => (index === 1) ? value.slice(0, 1) : value).map((value, index) => (index > 0) ? parseFloat(value) : value);
-		let expirationDateArray = expirationDate.split(" ").map((value, index) => (index === 1) ? value.slice(0, 1) : value).map((value, index) => (index > 0) ? parseFloat(value) : value);
-		if (currentDateArray[2] <= expirationDateArray[2]) {
-			let currentIndexOfMonth = "January February March April May June July August September October November December".split(" ").indexOf(currentDateArray[0]);
-			let expirationIndexOfMonth = "January February March April May June July August September October November December".split(" ").indexOf(expirationDateArray[0]);
-			console.log(currentIndexOfMonth < expirationIndexOfMonth ? true : currentIndexOfMonth === expirationIndexOfMonth ? (currentDateArray[1] <= expirationDateArray[1] ? true : false) : false);
-		} else {
-			console.log(false);
-		};
+		var currentDateArray = currentDate.split(" ")
+      .map((value, index) => (index === 1) ? value.slice(0, 1) : value)
+      .map((value, index) => (index > 0) ? parseFloat(value) : value);
+		var expirationDateArray = expirationDate.split(" ")
+      .map((value, index) => (index === 1) ? value.slice(0, 1) : value)
+      .map((value, index) => (index > 0) ? parseFloat(value) : value);
+		var currentIndexOfMonth = "January February March April May June July August September October November December".split(" ").indexOf(currentDateArray[0]);
+		var expirationIndexOfMonth = "January February March April May June July August September October November December".split(" ").indexOf(expirationDateArray[0]);
+    (currentDateArray[2] <= expirationDateArray[2]) // statement 1
+      ? console.log( // run if statement 1 is true
+        (currentIndexOfMonth < expirationIndexOfMonth) // statement 2
+          ? true //run if statement 2 is true
+          : (currentIndexOfMonth === expirationIndexOfMonth) // if statement 2 false run statement 3
+            ? (currentDateArray[1] <= expirationDateArray[1]) // if statement 3 is true run statement 4
+                ? true  // run if statement 4 is true
+                : false // run if statement 4 is false
+            : false) // run if statement is false
+		  : console.log(false) // run if statement 1 is false
 	};
 };
 
