@@ -8,7 +8,7 @@
 //Complete the function reindeers(), which takes a number of presents and returns
 //the minimum numbers of required reindeers. If the number of presents is too high, throw an error.
 
-var reindeers = (presents) =>
+const reindeers = (presents) =>
   console.log(
     "30 60 90 120 150 180".split(" ")
       .map((value, index) =>

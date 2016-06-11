@@ -2,7 +2,7 @@
 //smallest value of an array or the index of that value. The function's 2nd parameter
 //will tell whether it should return the value or the index. if input is anything other vale or index return -1
 
-var minimumNumberIndexValue = (arr, toReturn) =>
+const minimumNumberIndexValue = (arr, toReturn) =>
   (toReturn === "value") //statement
     ? parseFloat(
         arr.filter((value) => value === arr[arr.indexOf(Math.min.apply(null,arr))])

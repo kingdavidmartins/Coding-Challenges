@@ -1,6 +1,6 @@
 // write a function takes a number and return the same number with commas spearating the place values so it will be easier to read stand dictionary numbers
 
-var placeValue = (number) =>
+const placeValue = (number) =>
   number.toString()
     .split("")
     .reverse()

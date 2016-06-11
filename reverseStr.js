@@ -1,6 +1,6 @@
 // create a function that takes a str and reverses it
 
-var reverseStr = (str) =>
+const reverseStr = (str) =>
   str.split("")
   .reverse()
   .join("");

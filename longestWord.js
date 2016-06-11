@@ -1,6 +1,6 @@
 // take the str parameter being passed and return the largest word in the string
 
-var longestWord = str =>
+const longestWord = str =>
   str.split(" ")
     .filter((value) =>
       value.length

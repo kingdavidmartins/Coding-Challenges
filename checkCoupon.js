@@ -2,7 +2,7 @@
 //If the coupon is good, console.log(true). Otherwise, console.log(false). A coupon expires
 //at the END of the expiration date. All dates will be passed in as strings in this format: "June 15, 2014"
 
-var checkCoupon = (enteredCode, correctCode, currentDate, expirationDate) => {
+const checkCoupon = (enteredCode, correctCode, currentDate, expirationDate) => {
   if (enteredCode !== correctCode) {
 		console.log(false);
 	} else {

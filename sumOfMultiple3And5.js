@@ -2,7 +2,7 @@
 //The sum of these multiples is 23. Finish the solution so that it prints the sum of all
 //the multiples of 3 or 5 below the number passed in.
 
-let sumOfMultiple3And5 = (number) => {
+const sumOfMultiple3And5 = (number) => {
   let multiplesOfArray = [];
   for (let a = 1; a < number; a++) {
     if ((a % 3 === 0) || (a % 5 === 0)) {

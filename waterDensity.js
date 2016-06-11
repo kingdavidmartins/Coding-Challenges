@@ -17,7 +17,7 @@ Example
 
 */
 
-var waterDensity = (glass) =>
+const waterDensity = (glass) =>
   [
     glass.toString()
       .replace(/,/g, "")

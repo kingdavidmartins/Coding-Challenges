@@ -3,8 +3,8 @@
 // that sqrt(n) is also an integer. If the parameter is itself not a perfect square, than -1
 // should be returned. You may assume the parameter is positive.
 
-var findNextSquare = (number) =>
-  ((Math.sqrt(number).toString().indexOf(".")) === -1) //statement
+const findNextSquare = (number) =>
+  (Math.sqrt(number).toString().indexOf(".") === -1) //statement
     ? Math.pow((Math.sqrt(number) + 1), 2) //run if true
     : -1; //run if false
 

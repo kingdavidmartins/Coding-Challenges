@@ -2,7 +2,7 @@
 // if the sequence follows an arithmetic pattern or return "Geometric" if it follows
 // a geometric pattern. If the sequence doesn't follow either pattern return -1.
 
-var arithGeo = (numArray) =>
+const arithGeo = (numArray) =>
   (numArray.length-1 === numArray.filter((value, index, array) => parseFloat(array[index + 1]) / parseFloat(array[index]) === (parseFloat(array[1]) / parseFloat(array[0]))).length) // statement
     ? "Geometric" // run if true
     : (numArray.length === numArray.filter((value, index, array) => (parseFloat(array[index]) / parseFloat(array[0]) ===  index + 1)).length) // new statement

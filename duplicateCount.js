@@ -2,7 +2,7 @@
 // characters that occur more than once in the given string. The given string can be
 // assumed to contain only uppercase and lowercase alphabets.
 
-var duplicateCount = (text) =>
+const duplicateCount = (text) =>
   (text === "") // statement
     ? "# no characters repeats more than once" // run if true
     : "# " + "abcdefghijklmnopqrstuvwxyz" // run if false

@@ -1,6 +1,6 @@
 // write a function that takes a str and counts the number of vowels
 
-var vowelCount = (str) =>
+const vowelCount = (str) =>
   str.split("")
     .filter((value) => "aeiou".split("").indexOf(value) !== -1)
     .length;

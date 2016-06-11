@@ -2,7 +2,7 @@
 //numbers in num. For example: if num is 454793 the output should be 4547-9-3. Don't
 //count zero as an odd number. Code challenge from code wars
 
-var insertDash =  (number) =>
+const insertDash =  (number) =>
   number.toString()
     .split("")
     .map((value, index, array) =>

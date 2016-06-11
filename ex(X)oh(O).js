@@ -1,7 +1,7 @@
 // create a function that prints true is x appears the same amount of times as o
 // prints false when x & o isn't equal
 
-var ExOh = (str) =>
+const ExOh = (str) =>
   str.toLowerCase()
     .split("x")
     .length - 1

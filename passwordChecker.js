@@ -5,7 +5,7 @@
 	//alert("Don't forget to ensure your safty you'll have to diversify your passowrd by incorporating everything you can from uppercase & lowercase varters, numbers, and special symbols");
 //	var userPassword = prompt("Please input your New Password.");
 
-var passwordStrengthChecker = (userPassword) => {
+const passwordStrengthChecker = (userPassword) => {
 	console.log(
 		[
 			"abcdefghijklmnopqrstuvwxyz".split("")

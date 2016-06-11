@@ -1,6 +1,6 @@
 // take create a word count function that take a str and prints the
 // amount of words in the array
 
-var wordCount = (str) => str.split(" ").length;
+const wordCount = (str) => str.split(" ").length;
 
 wordCount("this is a test to count all the words in the string it should return 17 string");

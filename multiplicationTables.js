@@ -5,7 +5,7 @@
 //3 6 9
 // for given example, the return value should be: [[1,2,3],[2,4,6],[3,6,9]]
 
-let multiplicationTable = (size) => {
+const multiplicationTable = (size) => {
   let multiplicationTableArray = [];
   for (let a = 0; a < size; a++) {
     multiplicationTableArray[a] = [];
