@@ -1,15 +1,14 @@
-var _ = require('lodash');
-
-var getAllFactors = (integer) => {
-  var factors = [];
-  for (var a = 1; a <= integer; a++) {
+import _ from 'lodash'
+const getAllFactors = (integer) => {
+  let factors = []
+  for (let a = 1; a <= integer; a++) {
     if (_.divide(integer, a) === Math.floor(_.divide(integer, a))) {
-      factors.push(a);
+      factors.push(a)
     };
   };
-  return factors;
+  return factors
 }
 
 console.log(
   getAllFactors(900)
-);
+)
