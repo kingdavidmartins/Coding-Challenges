@@ -2,14 +2,13 @@
 //The sum of these multiples is 23. Finish the solution so that it prints the sum of all
 //the multiples of 3 or 5 below the number passed in.
 
-const sumOfMultiple3And5 = (number) => {
-  let multiplesOfArray = [];
-  for (let a = 1; a < number; a++) {
-    if ((a % 3 === 0) || (a % 5 === 0)) {
-       multiplesOfArray.push(a);
-    };
-  };
-  return multiplesOfArray.reduce((a,b) => a + b);
-};
+const sumOfMultiple3And5 = (number) =>
+  Array
+    .apply(null, {length: number})
+    .map((value, index) => parseFloat(index + 1))
+    .filter(number => (number % 3 === 0) || (number % 5 === 0))
+    .reduce((a, b) => a + b)
 
-sumOfMultiple3And5(89);
+console.log(
+  sumOfMultiple3And5(89)
+);
