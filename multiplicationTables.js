@@ -5,15 +5,17 @@
 //3 6 9
 // for given example, the return value should be: [[1,2,3],[2,4,6],[3,6,9]]
 
-const multiplicationTable = (size) => {
-  let multiplicationTableArray = [];
-  for (let a = 0; a < size; a++) {
-    multiplicationTableArray[a] = [];
-    for (let b = 0; b < size; b++) {
-      multiplicationTableArray[a].push((a+1) * (b+1));
-    };
-    console.log(multiplicationTableArray[a].join("|"));
-  };
-};
+const multiplicationTable = (size) =>
+  Array
+    .apply(null, {length: size})
+    .map((value, indexLvl1) =>
+      Array
+        .apply(null, {length: size})
+        .map((value, indexLvl2) =>
+          ((indexLvl1 + 1) * (indexLvl2 + 1))))
+    .map(array => array.join('|'))
+    .join('\n')
 
-multiplicationTable(4);
+console.log(
+  multiplicationTable(4)
+);
