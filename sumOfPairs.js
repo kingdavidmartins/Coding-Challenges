@@ -15,9 +15,9 @@
 
 const sum_pairs = (ints, s) =>
   ints
-    .map((mainNum, mainIndex, mainArr) =>
+    .map((mainNum, mainIndex) =>
       ints
-        .map((checkerNum, checkerIndex, checkerArr) =>
+        .map((checkerNum, checkerIndex) =>
           (mainIndex >= checkerIndex)
             ? false
             : ((mainNum + checkerNum === s))
