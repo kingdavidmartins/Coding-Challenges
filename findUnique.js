@@ -9,13 +9,12 @@
 // [ 1, 8, 4, 4, 6, 1, 8 ] => 6
 
 const findUnique = (numbers) =>
-  parseFloat(numbers
+  numbers
     .filter((num) =>
       numbers
         .join('')
         .split(num.toString())
-        .length - 1 === 1)
-    .toString())
+        .length - 1 === 1)[0]
 
 console.log(
 findUnique([ 1, 8, 4, 4, 6, 1, 8 ]) // => 6
