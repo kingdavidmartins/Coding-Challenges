@@ -9,8 +9,8 @@ const generateNameDynamic = (strLength, numOfStrGenerated) =>
     .map((uniqueId) =>
       Array
       .apply(null, {length: strLength})
-      .map((value, index, arr) =>
-        arr[index] = ('abcdefghijklmnopqrstuvwxyz0123456789'
+      .map((str) =>
+         ('abcdefghijklmnopqrstuvwxyz0123456789'
                       +'abcdefghijklmnopqrstuvwxyz0123456789'.toUpperCase())
                         .split('')
                         [Math.floor(
