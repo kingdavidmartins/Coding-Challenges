@@ -38,9 +38,9 @@ const csvColumns = (csv, indices) =>
             .filter((value, index) => indices.indexOf(index) !== -1)
             .join(','))
         .join('\n')
-        
+
 console.log(
   csvColumns("1,2,3\n4,5,6", [0, 1]), // => "1,2\n4,5"
-  csvColumns("1,2\n3,4\n5,6", [5, 6, 7]) // => returns ""
+  csvColumns("1,2\n3,4\n5,6", [5, 6, 7]), // => returns ""
   csvColumns("a,b,c,d,e\n1,2,3,4,5\nf,g,h,i,j", [1, 3, 5, 7]) // => "b,d\n2,4\ng,i"
 );
