@@ -1,5 +1,6 @@
-def findUnique(l: List[int]) = l.toSet.filter (i => l.indexOf (i) == l.lastIndexOf (i))
+def findUnique(l: List[Int]) = l.filter(i => l.indexOf(i) == l.lastIndexOf(i))
+val myList: List[Int] = List(1, 1, 2, 3, 3, 3, 4)
 
 println(
-  findUnique)(1, 1, 2, 3, 3)
+  findUnique(myList)
 )
